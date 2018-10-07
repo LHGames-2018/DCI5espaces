@@ -69,23 +69,26 @@ class Bot:
     def execute_turn(self, gameMap, visiblePlayers):
 
         if(self.actionList[self.action] == 1): #Droite
-            action+=1
+            self.action+=1
             return create_move_action(Point(1,0))
 
         elif(self.actionList[self.action] == 2): #Gauche
-            action+=1
+            self.action+=1            
             return create_move_action(Point(-1,0))
             
         elif(self.actionList[self.action] == 3): #Up
-            action+=1
+            self.action+=1
+            
             return create_move_action(Point(0,-1))
             
         elif(self.actionList[self.action] == 4): #Down
-            action+=1
+            self.action+=1
+            
             return create_move_action(Point(0,1))
             
         elif(self.actionList[self.action] == 5): #miner
-            action+=1
+            self.action+=1
+            
             return create_collect_action(Point(0,-1))
         #move = Point(0,0)
 
