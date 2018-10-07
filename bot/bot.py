@@ -55,7 +55,7 @@ class Bot:
             return Point(0,-1)
 
     def __init__(self):
-        self.actionList =[2,2,2,2,3,5,4,2,2,2,2]
+        self.actionList =[1,1,1,1,1,1,1,1,1,1,1,1,1,3,5,4,2,2,2,2]
         self.action = 0
 
     def before_turn(self, playerInfo):
@@ -69,18 +69,23 @@ class Bot:
     def execute_turn(self, gameMap, visiblePlayers):
 
         if(self.actionList[self.action] == 1): #Droite
+            action+=1
             return create_move_action(Point(1,0))
 
         elif(self.actionList[self.action] == 2): #Gauche
+            action+=1
             return create_move_action(Point(-1,0))
             
         elif(self.actionList[self.action] == 3): #Up
+            action+=1
             return create_move_action(Point(0,-1))
             
         elif(self.actionList[self.action] == 4): #Down
+            action+=1
             return create_move_action(Point(0,1))
             
         elif(self.actionList[self.action] == 5): #miner
+            action+=1
             return create_collect_action(Point(0,-1))
         #move = Point(0,0)
 
