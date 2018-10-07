@@ -78,17 +78,14 @@ class Bot:
             
         elif(self.actionList[self.action] == 3): #Up
             self.action+=1
-            
             return create_move_action(Point(0,-1))
             
         elif(self.actionList[self.action] == 4): #Down
             self.action+=1
-            
             return create_move_action(Point(0,1))
             
         elif(self.actionList[self.action] == 5): #miner
             self.action+=1
-            
             return create_collect_action(Point(0,-1))
         #move = Point(0,0)
 
